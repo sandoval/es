@@ -1,0 +1,108 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt,a4paper]{report}
+ 
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, subfigure}
+\usepackage{indentfirst}
+
+\graphicspath{ {images/} }
+
+\title{Especificação de Requisitos do Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF}
+\author{Pedro Salum\\
+	09/0139232\\
+	pedro@loopec.com.br
+	\and
+	Daniel Sandoval\\
+	09/0109899\\
+	daniel@loopec.com.br}
+	
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introdução}
+
+Este documento apresenta os requisitos levantados para o Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF. Os requisitos levantados foram divididos em quatro categorias: \textit{user stories}, requisitos não funcionais, requisitos de sistema e requisitos de domínio.
+
+\paragraph{\textit{User stories}} Devido à utilização de métodos ágeis para o desenvolvimento, os requisitos de usuário foram levantados já em formato de \textit{user stories}: ações que cada usuário gostaria de poder realizar no sistema, seguindo o modelo <realizar ação> para <atingir objetivo>, para cada perfil de usuário identificado no sistema.
+
+\paragraph{Requisitos não funcionais} São requisitos que não representam uma funcionalidade necessária para se realizar uma ação no sistema propriamente dita, mas que dizem respeito ao seu funcionamento geral.
+
+\paragraph{Requisitos de sistema} São requisitos diretamente relacionados à existência do sistema em si e do ambiente criado e gerenciado por ele.
+
+\paragraph{Requisitos de domínio} São requisitos identificados levando-se em consideração o domínio da aplicação, como restrições legais, restrições de órgãos reguladores ou restrições intrínsecas ao tipo de negócio e suas entidades.
+
+\chapter{User Stories}
+
+Cada seção deste capítulo enumera as \textit{user stories} de um papel de usuário no sistema.
+
+\section{Diretor}
+\begin{itemize}
+\item[-] Quero obter estatísticas sobre os processos para avaliar a capacidade produtiva da DP-DF
+\end{itemize}
+
+\section{Defensor ou Colaborador}
+\begin{itemize}
+\item[-] Quero modificar peças escritas pelos estagiários para poder corrigir eventuais erros.
+\item[-] Quero consultar um processo pelo seu número para saber o seu status
+\item[-] Quero reivindicar a posse de um documento para atualizar a sua custódia.
+\item[-] Quero escanear os documentos referentes ao processo, solicitados ou não pelo juiz, para complementar o processo
+\item[-] Quero escanear os documentos (ID, CPF, Endereço…) para complementar o cadastro de um assistido.
+\item[-] Quero acessar uma peça para colaborar no desenvolvimento de um documento.
+\item[-] Quero inserir dados dos assistidos para poder auxiliar na geração automática de documentos.
+\end{itemize}
+
+\section{Servidor}
+\begin{itemize}
+\item[-] Quero registrar a entrada de documentos na DP-DF provenientes de Tribunais/Forums para iniciar o processo de controle de custódia.
+\item[-] Quero registrar a saída de documentos da DP-DF para os Tribunais para atualizar o controle de custódia
+\item[-] Quero pesquisar o documento pelo código para saber o seu histórico.
+\end{itemize}
+
+\section{Estagiário}
+\begin{itemize}
+\item[-] Quero escanear os documentos (ID, CPF, Endereço…) para complementar o cadastro de um assistido.
+\item[-] Quero acessar uma peça para colaborar no desenvolvimento de um documento.
+\item[-] Quero inserir dados dos assistidos para poder auxiliar na geração automática de documentos.
+\end{itemize}
+
+\section{Usuário}
+\begin{itemize}
+\item[-] Quero inserir minha matrícula e senha para iniciar uma sessão autenticada no sistema.
+\item[-] Quero clicar no botão para finalizar a minha sessão no sistema.
+\end{itemize}
+
+\section{Administrador}
+\begin{itemize}
+\item[-] Quero alterar as permissões para controlar o nível de acesso dos usuários
+\end{itemize}
+%REQUISITOS NÃO FUNCIONAIS
+%	- O sistema deve ser capaz de efetuar integração com scanners.
+%	- O sistema deve ser capaz de se manter disponível mesmo se a conexão com o servidor principal estiver instável.
+%	- O sistema deve se comunicar com os outros nós de forma segura e criptografada
+%	- O sistema deve disponibilizar ícones com duas densidades de pixel: 1;1.45;
+%	- O sistema não deve permitir acesso as funcionalidades para usuários não autenticados
+%	- O sistema não deve ser acessível fora da GDFNET
+%	- O sistema deve estar disponível 24 horas por dia/7 dias por semana.
+%	- O sistema deve estar disponível na língua PT_BR
+%	- O sistema deve autenticar o usuário em, no máximo, 3 segundos. Considerando que as configurações mínimas de hardware foram atendidas.
+%	- 
+%REQUISITO DE SISTEMA
+%	- O sistema deve associar todo e qualquer documento pessoal escaneado à um assistido.
+%	- O sistema não deve permitir duas sessões ativas de um mesmo usuário
+%
+%REQUISITO DE DOMINIO
+%	- O sistema não deve permitir que uma peça já finalizada e enviada seja alterada
+%	- O sistema não deve permitir que um Defensor/Colaborador reivindique a posse de um documento que já está sob sua custódia
+%	- O sistema não deve permitir o anexo de novos documentos em um processo extinto
+%	- O sistema não deve permitir o registro duplicado de documentos
+%	- O sistema não deve permitir o registro de entrada de um documento que já está sob a custódia da DP-DF
+%	- O sistema não deve permitir o registro de saída de um documento que não está sob a custódia.
+%	- O sistema não deve permitir a associação de mais de um documento de mesma natureza ao mesmo assistidos (2 cpfs)
+%	- O sistema não deve permitir que usuários de nível inferior altere permissões de usuários superiores na hierarquia.
+%	- O código de um documento é único e definido por um conjunto de 10 caracteres alfanuméricos
+%	- A senha deve conter no mínimo 5 caracteres alfanuméricos, com ao menos um número e um caractere especial.
+
+\end{document}
