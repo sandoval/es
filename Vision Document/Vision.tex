@@ -1,0 +1,173 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt,a4paper]{report}
+ 
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, subfigure}
+\usepackage{indentfirst}
+
+\graphicspath{ {images/} }
+
+\title{Documento de Visão do Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF}
+\author{Pedro Salum\\
+	09/0139232\\
+	pedro@loopec.com.br
+	\and
+	Daniel Sandoval\\
+	09/0109899\\
+	daniel@loopec.com.br}
+	
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introdução}
+
+\section{Finalidade}
+
+A finalidade deste documento é coletar, analisar e definir necessidades e recursos de nível superior do Sistema de Gerenciamento Eletrônico de Documentos - SGED, com a finalidade de definir seu objetivo, suas principais funcionalidades e sua viabilidade.
+
+\section{Escopo}
+
+O escopo deste documento se limita ao projeto SGED, levando em consideração seus usuários, sua equipe de desenvolvimento e ecossistema de atuação.
+
+\section{Definições, Acrônimos e Abreviações}
+\begin{description}
+\item[SGED] Sistema de Gerênciamento Eletrônico de Documentos;
+\item[DPDF] Defensoria Públcia do Distrito Federal.
+\end{description}
+
+\section{Visão Geral}
+
+\chapter{Posicionamento}
+
+\section{Oportunidade de Negócios}
+
+Com a quantidade cada vez maior de documentos burocráticos gerados e a inevitável informatização de processos organizacionais, surge a necessidade de uma solução de software para armazenamento e catalogação desses documentos de maneira que permita a fácil localização, compartilhamento e acesso a tais documentos.
+
+Tal necessidade é mais agravada em grandes organizações como a Defensoria Pública do Distrito Federal (DPDF), mas não deixa de ser um problema em pequenas empresas. Este documento descreve solução capaz de armazenar e catalogar documentos, sendo eles completamente digitais, digitalizados ou físicos.
+
+\section{Descrição do Problema}
+
+\subsection*{Problema I}
+\paragraph{O problema} de armazenamento, catalogação e controle de custódia de documentos burocráticos.
+\paragraph{Afeta} a Defensoria Pública do Distrito Federal.
+\paragraph{Cujo o impacto é} perda de documentos; dificuldade de transporte de documentos físicos; dificuldade de recuperar documentos; oneração em geral de processos organizacionais;
+\paragraph{Uma boa solução permitiria} localização rápida de documento; compartilhamento de documentos digitais; registro de movimentação de documentos; busca imediata de documentos digitais ou digitalizados; armazenamento organizado e centralizado de documentos físicos;
+
+\subsection*{Problema II}
+\paragraph{O problema} Dificuldade de transmissão da informação quando a construção de um documento é realizada por várias pessoas.
+\paragraph{Afeta} a Defensoria Pública do Distrito Federal.
+\paragraph{Cujo o impacto é} demora na construção de peças jurídicas; erros em peças decorridos de falhas na comunicação; perda de documentos na passagem de uma pessoa para outra.
+\paragraph{Uma boa solução permitiria} a criação de um documento digital que poderia ser encaminhado a uma ou mais pessoas (uma de cada vez) para realização de modificações com comentários, até que chegue em sua versão final.
+
+\section{Solução}
+
+Para organizações de todos os tamanhos que possuem documentos digitais ou físicos que precisam ser organizados e compartilhados, o SGED oferece solução completa de fácil utilização para controle de custódia, organização, compartilhamento e armazenamento de documentos.
+
+\chapter{Usuários e \textit{Stakeholders}}
+
+\section{Ambiente dos Usuários}
+
+Os usuários da solução proposta estão entre todos os envolvidos no atendimento jurídico da DPDF, bem como os membros da adminstração e Direção geral dessa instituição. A infraestrutura está bem estabelecida, com estações de trabalho utilizando o ambiente Microsoft e rede interligando todos os pontos de atendimento.
+
+Não há sistema de informações em uso porem há necessidade de integração. O editor de texto utilizado é o Microsoft Word e o sistema proposto deve utilizar documentos no formato DOCX para a edição colaborativa.
+
+\section{\textit{Stakeholders}}
+
+\subsection{Defensoria Pública do Distrito Federal}
+
+\begin{center}
+\begin{tabular}{ | l | p{10cm} | }
+\hline
+Representante          & Lano de Castro, Leandro Hungria e Dr. Jairo de Almeida. \\
+\hline
+Descrição              & Principal \textit{stakeholder}, com entendimento do negócio e entendimento técnico.\\
+\hline
+Responsabilidades      & Validar produtos entregues; Fornecer as informações de negócio e sobre infraestrutura necessárias para o desenvolvimento; Fornecer infraestrutura para implantação.\\
+\hline
+Critério de Sucesso    & Ter o sistema que atenda às necessidades da DPDF implantado e funcionando\\
+\hline
+\end{tabular}
+\end{center}
+
+%3.6	User Profiles  %[Describe each unique user of the system here by filling in the following table for each user type.  Remember user types can be as divergent as gurus and novices. For example, a guru might need a sophisticated, flexible tool with cross-platform support, while a novice might need a tool that is easy to use and user-friendly. A thorough profile should cover the following topics for each type of user:]%3.6.1	<User Name>%Representative	[Who is the user representative to the project?  (optional  if documented elsewhere.)  This often refers to the Stakeholder that represents the set of users, for example, Stakeholder: Stakeholder1.]%Description	[A brief description of the user type.]%Type	[Qualify the user’s expertise, technical background, and degree of sophistication—that is, guru, casual user, etc.] %Responsibilities	[List the user’s key responsibilities with regards to the system being developed— that is, captures details, produces reports, coordinates work, etc.]%Success Criteria	[How does the user define success?% How is the user rewarded?]%Involvement	[How the user is involved in the project? Relate where possible to RUP workers—that is, Requirements Reviewer, etc.]%Deliverables	[Are there any deliverables the user produces and, if so, for whom?]%Comments / Issues	[Problems that interfere with success and any other relevant information go here.%These would include trends that make the user’s job easier or harder.]%%3.7	Key Stakeholder / User Needs%[List the key problems with existing solutions as perceived by the stakeholder. Clarify the following issues for each problem:%•	What are the reasons for this problem? %•	How is it solved now?%•	What solutions does the stakeholder want?]%[It is important to understand the relative importance the stakeholder or user places on solving each problem. Ranking and cumulative voting techniques indicate problems that must be solved versus issues they would like addressed.%Fill in the following table - if using ReqPro to capture the Needs, this could be an extract or report from that tool.]%Need	Priority	Concerns	Current Solution	Proposed Solutions%Broadcast messages				%%3.8	Alternatives and Competition%[Identify alternatives the stakeholder perceives as available. These can include buying a competitor’s product, building a homegrown solution or simply maintaining the status quo. List any known competitive choices that exist, or may become available. Include the major strengths and weaknesses of each competitor as perceived by the stakeholder.]%3.8.1	<aCompetitor>%3.8.2	<anotherCompetitor>%4.	Product Overview%[This section provides a high level view of the product capabilities, interfaces to other applications, and systems configurations. This section usually consists of three subsections, as follows: %•	Product perspective %•	Product functions %•	Assumptions and dependencies]%4.1	Product Perspective%[This subsection of the Vision document should put the product in perspective to other related products and the user’s environment. If the product is independent and totally self-contained, state it here. If the product is a component of a larger system, then this subsection should relate how these systems interact and should identify the relevant interfaces between the systems. One easy way to display the major components of the larger system, interconnections, and external interfaces is via a block diagram.]%4.2	Summary of Capabilities%[Summarize the major benefits and features the product will provide. For example, a Vision document for a customer support system may use this part to address problem documentation, routing, and status reporting without mentioning the amount of detail each of these functions requires.%Organize the functions so the list is understandable to the customer or to anyone else reading the document for the first time. A simple table listing the key benefits and their supporting features might suffice. For example:]%Customer Support System%Customer Benefit	Supporting Features%New support staff can quickly get up to speed.	Knowledge base assists support personnel in quickly identifying known fixes and workarounds%Customer satisfaction is improved because nothing falls through the cracks.	Problems are uniquely itemized, classified and tracked throughout the resolution process. Automatic notification occurs for any aging issues.%Management can identify problem areas and gauge staff workload.	Trend and distribution reports allow high level review of problem status.%Distributed support teams can work together to solve problems.	Replication server allows current database information to be shared across the enterprise%Customers can help themselves, lowering support costs and improving response time.	Knowledge base can be made available over the Internet. Includes hypertext search capabilities and graphical query engine%4.3	Assumptions and Dependencies%[List each of the factors that affects the features stated in the Vision document. List assumptions that, if changed, will alter the Vision document. For example, an assumption may state that a specific operating system will be available for the hardware designated for the software product. If the operating system is not available, the Vision document will need to change.]%4.4	Cost and Pricing%[For products sold to external customers and for many in- house applications, cost and pricing issues can directly impact the applications definition and implementation. In this section, record any cost and pricing constraints that are relevant. For example, distribution costs, (# of diskettes, # CD-ROMs, CD mastering) or other cost of goods sold constraints (manuals, packaging) may be material to the projects success, or irrelevant, depending on the nature of the application.]%4.5	Licensing and Installation%[Licensing and installation issues can also directly impact the development effort. For example, the need to support serializing, password security or network licensing will create additional requirements of the system that must be considered in the development effort.%Installation requirements may also affect coding, or create the need for separate installation software.]%5.	Product Features%[List and briefly describe the product features. Features are the high-level capabilities of the system that are necessary to deliver benefits to the users. Each feature is an externally desired service that typically requires a series of inputs to achieve the desired result. For example, a feature of a problem tracking system might be the ability to provide trending reports. As the use-case model takes shape, update the description to refer to the use cases.%Because the Vision document is reviewed by a wide variety of involved personnel, the level of detail should be general enough for everyone to understand. However, enough detail should be available to provide the team with the information they need to create a use-case model.%To effectively manage application complexity, we recommend for any new system, or an increment to an existing system, capabilities are abstracted to a high enough level so 25-99 features result. These features provide the fundamental basis for product definition, scope management, and project management. Each feature will be expanded in greater detail in the use-case model.%Throughout this section, each feature should be externally perceivable by users, operators or other external systems. These features should include a description of functionality and any relevant usability issues that must be addressed. The following guidelines apply:%•	Avoid design. Keep feature descriptions at a general level. Focus on capabilities needed and why, (not how)	 they should be implemented.%•	If you are using the Requisite toolkit, all should be selected as requirements of type for easy reference and tracking.]%5.1	<aFeature>%%5.2	<anotherFeature>%%6.	Constraints %[Note any design constraints, external constraints or other dependencies.]%7.	Quality Ranges %[Define the quality ranges for performance, robustness, fault tolerance, usability, and similar characteristics that are not captured in the Feature Set.]%8.	Precedence and Priority%[Define the priority of the different system features.]%9.	Other Product Requirements%[At a high-level, list applicable standards, hardware or platform requirements, performance requirements, and environmental requirements.]%9.1	Applicable Standards%[List all standards with which the product must comply. These can include legal and regulatory (FDA, UCC) communications standards (TCP/IP, ISDN), platform compliance standards (Windows, Unix, etc.), and quality and safety standards (UL, ISO, CMM).]%9.2	System Requirements%[Define any system requirements necessary to support the application. These can include the supported host operating systems and network platforms, configurations, memory, peripherals, and companion software.]%9.3	Performance Requirements%[Use this section to detail performance requirements. Performance issues can include such items as user load factors, bandwidth or communication capacity, throughput, accuracy, and reliability or response times under a variety of loading conditions.]%9.4	Environmental Requirements%[Detail environmental requirements as needed. For hardware- based systems, environmental issues can include temperature, shock, humidity, radiation, etc. For software applications, environmental factors can include usage conditions, user environment, resource availability, maintenance issues, and error handling, and recovery.]%10.	Documentation Requirements%[This section describes the documentation that must be developed to support successful application deployment.]%10.1	User Manual%[Describe the purpose and contents of the User Manual. Discuss desired length, level of detail, need for index, glossary of terms, tutorial vs. reference manual strategy, etc. Formatting and printing constraints should also be identified.]%10.2	On-line Help%[Many applications provide an on-line help system to assist the user. The nature of these systems is unique to application development as they combine aspects of programming (hyperlinks, etc) with aspects of technical writing (organization, presentation). Many have found the development of on-line help system is a project within a project that benefits from up-front scope management and planning activity.]%10.3	Installation Guides, Configuration, Read Me File%[A document that includes installation instructions and configuration guidelines is important to a full solution offering. Also, a Read Me file is typically included as a standard component. The Read Me can include a "What's New With This Release” section, and a discussion of compatibility issues with earlier releases. Most users also appreciate documentation defining any known bugs and workarounds in the Read Me file.]%10.4	Labeling and Packaging%[Today's state of the art applications provide a consistent look and feel that begins with product packaging and manifests through installation menus, splash screens, help systems, GUI dialogs, etc. This section defines the needs and types of labeling to be incorporated into the code. Examples include copyright and patent notices, corporate logos, standardized icons and other graphic elements, etc.]%11.	Appendix 1 - Feature Attributes%[Features should be given attributes that can be used to evaluate, track, prioritize, and manage the product items proposed for implementation. All requirement types and attributes should be outlined in the Requirements Management Plan, however you may wish to list and briefly describes the attributes for features that have been chosen. Following subsections represent a set of suggested feature attributes.]%11.1	Status%[Set after negotiation and review by the project management team. Tracks progress during definition of the project baseline.]%Proposed	[Used to describe features that are under discussion but have not yet been reviewed and accepted by the "official channel," such as a working group consisting of representatives from the project team, product management and user or customer community.]%Approved	[Capabilities that are deemed useful and feasible and have been approved for implementation by the official channel. ]%Incorporated	[Features incorporated into the product baseline at a specific point in time.]%11.2	Benefit%[Set by Marketing, the product manager or the business analyst. All requirements are not created equal. Ranking requirements by their relative benefit to the end user opens a dialogue with customers, analysts and members of the development team. Used in managing scope and determining development priority.]%Critical	[Essential features. Failure to implement means the system will not meet customer needs. All critical features must be implemented in the release or the schedule will slip.]%Important	[Features important to the effectiveness and efficiency of the system for most applications. The functionality cannot be easily provided in some other way. Lack of inclusion of an important feature may affect customer or user satisfaction, or even revenue, but release will not be delayed due to lack of any important feature.]%Useful	[Features that are useful in less typical applications, will be used less frequently, or for which reasonably efficient workarounds can be achieved. No significant revenue or customer satisfaction impact can be expected if such an item is not included in a release.]%%11.3	Effort%[Set by the development team. Because some features require more time and resources than others, estimating the number of team or person-weeks, lines of code required or function points, for example, is the best way to gauge complexity and set expectations of what can and cannot be accomplished in a given time frame. Used in managing scope and determining development priority.]%11.4	Risk%[Set by development team based on the probability the project will experience undesirable events, such as cost overruns, schedule delays or even cancellation. Most project managers find categorizing risks as high, medium, and low sufficient, although finer gradations are possible. Risk can often be assessed indirectly by measuring the uncertainty (range) of the projects teams schedule estimate.]%11.5	Stability%[Set by analyst and development team based on the probability the feature will change or the team’s understanding of the feature will change. Used to help establish development priorities and determine those items for which additional elicitation is the appropriate next action.]%11.6	Target Release%[Records the intended product version in which the feature will first appear. This field can be used to allocate features from a Vision document into a particular baseline release. When combined with the status field, your team can propose, record and discuss various features of the release without committing them to development. Only features whose Status is set to Incorporated and whose Target Release is defined will be implemented. When scope management occurs, the Target Release Version Number can be increased so the item will remain in the Vision document but will be scheduled for a later release.]%11.7	Assigned To%[In many projects, features will be assigned to "feature teams" responsible for further elicitation, writing the software requirements and implementation. This simple pull down list will help everyone on the project team better understand responsibilities.]%11.8	Reason%[This text field is used to track the source of the requested feature. Requirements exist for specific reasons. This field records an explanation or a reference to an explanation. For example, the reference might be to a page and line number of a product requirement specification, or to a minute marker on a video of an important customer interview.]
+%Colocando figura...
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.7\textwidth]{arduino.png}
+%\caption{Arduino Uno}
+%\label{fig:arduino}
+%\end{figure}
+
+%\begin{enumerate}
+%\item [1.] Após a realização das 800 leituras, o Arduino fica em estado de espera;
+%\item [2.] O computador envia um caracter ao Arduino, solicitando uma leitura;
+%\item [3.] O Arduino envia ao computador a próxima leitura;
+%\item [4.] Os itens 2 e 3 se repetem até que sejam transmitidas as 800 leituras.
+%\end{enumerate}
+
+%\begin{equation}
+%f (t) = \frac{a_{0}}{2} + \sum_{n=1}^{\infty} [ a_{n}\cos{(\frac{n \pi t}{L})} + b_{n}\sin{(\frac{n \pi t}{L})} ]
+%\label{eq:serie_fourier}
+%\end{equation}
+
+%\begin{figure}[ht!]
+%     \begin{center}
+%        \subfigure[]{
+%            \label{fig:onda_seno}
+%            \includegraphics[width=0.47\textwidth]{seno.png}
+%        }
+%        \subfigure[]{
+%           \label{fig:onda_seno_fft}
+%           \includegraphics[width=0.47\textwidth]{seno_fft.png}
+%        }\\
+%        \subfigure[]{
+%            \label{fig:onda_triangular}
+%            \includegraphics[width=0.47\textwidth]{triangular.png}
+%        }
+%        \subfigure[]{
+%            \label{fig:onda_triangular_fft}
+%            \includegraphics[width=0.47\textwidth]{triangular_fft.png}
+%        }\\
+%        \subfigure[]{
+%            \label{fig:onda_quadrada}
+%            \includegraphics[width=0.47\textwidth]{quadrada.png}
+%        }
+%        \subfigure[]{
+%            \label{fig:onda_quadrada_fft}
+%            \includegraphics[width=0.47\textwidth]{quadrada_fft.png}
+%        }
+%    \end{center}
+%    \caption{
+%     	Sinais adquiridos através da solução apresentada: (a) onda senoidal; (c) onda triangular; (e) onda quadrada; e Análise no espectro da frequência dos sinais obtidos: (b) análise do sinal senoidal, (d) análise do sinal triangular; (f) análise do sinal quadrado.
+%     }
+%   \label{fig:resultados}
+%\end{figure}
+%
+%\begin{thebibliography}{9}
+%
+%\bibitem{integrationbyexample}
+%  Boesch, F.,
+%  \emph{Integration by Example - Euler vs Verlet vs Runge-Kutta}.
+%  \textit{http://codeflow.org/entries/2010/aug/28/integration-by-example-euler-vs-verlet-vs-runge-kutta/}
+%  
+%\bibitem{calculus}
+%  Leithold, L.; , The Calculus with Analytic Geometry, 6a Ed., HarperCollins Publishers, 1990.
+%
+%\bibitem{atmega328}
+%	ATmega328 \textit{http://www.atmel.com/devices/atmega328.aspx}
+%	
+%\bibitem{analogdigital}
+%	Analog and Digital \textit{http://www.stanford.edu/class/cs101/analog-digital.html}
+%	
+%\bibitem{transducers}
+%	What are Transducers? \textit{http://www.wisegeek.org/what-are-transducers.htm}
+%	
+%\bibitem{dsp}
+%	Processamento Digital de Sinais - Vantagens e Aplicações \textit{http://pt.scribd.com/doc/49815347/Processamento-Digital-de-Sinais-Vantagens-e-Aplicacoes}
+%	
+%\end{thebibliography}
+
+\end{document}
