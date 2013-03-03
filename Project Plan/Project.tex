@@ -63,9 +63,16 @@ Sabendo que métodos ágeis não são próprios para implantação uniforme em q
 As funcionalidades serão divididas em \textit{user stories} e catalogadas no \textit{product backlog}. Ao início de cada \textit{sprint}, algumas serão selecionadas e movidas para o \textit{sprint backlog}, tendo de ser implementadas até o final da \textit{sprint}.
 
 \paragraph{TDD --- \textit{Test-driven Development}} Metodologia que aumenta qualidade de código através da implementação de testes antes da implementação da funcionalidade que será testada. O uso de TDD no desenvolvimento reduz significativamente o número de defeitos com pouco \textit{overhead} \cite{1201238}.
-%-> Definição e explicação de qual processo de desenvolvimento de software escolhido para o projeto
+
+\paragraph{Versionamento} O versionamento será intensamente utilizado para enforçar todas as políticas de desenvolvimento planejadas. A ferramenta escolhida foi o \texttt{git} \cite{6188603}, por sua notória excelência em versionamento. Ao início de cada \textit{sprint}, deve ser criado um \textit{branch} para cada \textit{user story} e, de cada \textit{branch}, um para cada desenvolvedor. Ao final do dia, todos os \textit{branches} devem ser \textit{merged} no da \textit{sprint}.
 
 \chapter{Arquitetura e padrões de projeto}
+
+O sistema a ser desenvolvido deve ser completamente Web, para que seja acessível de qualquer estação de trabalho da DPDF ou qualquer computador ou dispositivo móvel ligado à Internet sem configuração necessária. Para sistemas Web, a arquitetura natural é a MVC (\textit{Model View Controller}) e será utilizada extensivamente. Adicionalmente, há outro desafio, devido à natureza distribuída da Instituição, cada Núcleo de Atendimento deve funcionar de maneira independente caso não haja conexão com a Sede. Além disso, as informações devem manter-se sincronizadas entre os Núcleos e a Sede. Para contemplar essa característica, será adotada uma arquitetura \textit{peer-to-peer}.
+
+\paragraph{MVC} Consolidada arquitetura para aplicações que variam de aplicativos móveis a sistemas web, ela provê separação entre o código responsável pela lógica de negócio e o código responsável pela apresentação e interface com o usuário.
+
+\paragraph{\textit{Peer-to-peer}} 
 
 %-> Definição e explicação da arquitetura de software escolhida para o projeto, focalizando a escolha de padrões de arquitetura, assim como diagrama de arquitetura
 %-> Definição e explicação dos design patterns escolhidos para serem implementados no projeto
@@ -74,9 +81,9 @@ As funcionalidades serão divididas em \textit{user stories} e catalogadas no \t
 %-> Discussão dos testes de verificação e validação realizados no projeto, assim como descrição de casos de testes, inspeção de código, testes unitários
 
 \chapter{Plano de Implantação e Manutenção}
-\paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como "MASTER", ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como "SLAVE", e as armazena para o próximo backup.
+\paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como ``MASTER'', ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como ``SLAVE'', e as armazena para o próximo backup.
 
-\paragraph{Manutenção} Manutensões serão efetuadas em ambiente de teste, as quais após estarem estáveis e prontas para deploy, seráo mandadas para o servidor central, substituindo a cópia "MASTER", onde os "SLAVES" irão solicitar a versão mais nova do sistema o mais cedo possível, ou seja, uma cópia do "MASTER" será baixada para o "SLAVE" a qual substituirá a versão anterior. Importante ressaltar que só serão transmitidos as partes atualizadas do sistema, reduzindo a carga da rede.
+\paragraph{Manutenção} Manutensões serão efetuadas em ambiente de teste, as quais após estarem estáveis e prontas para deploy, seráo mandadas para o servidor central, substituindo a cópia ``MASTER'', onde os ``SLAVES'' irão solicitar a versão mais nova do sistema o mais cedo possível, ou seja, uma cópia do ``MASTER'' será baixada para o "SLAVE" a qual substituirá a versão anterior. Importante ressaltar que só serão transmitidos as partes atualizadas do sistema, reduzindo a carga da rede.
 
 \chapter{Análise de Riscos}
 
@@ -123,7 +130,7 @@ Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema d
 Devido a baixa probabilidade de ocorrência dos riscos de importância Muito Baixa, e são impossíveis de serem mitigados, estes serão descartados para fins deste projeto. 
 
 %-> Discussão dos riscos do projeto e estratégia de mitigação
-\bibliographystyle{abnt-alf}
+\bibliographystyle{plain}
 \bibliography{es}
 
 \end{document}
