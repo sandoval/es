@@ -71,7 +71,13 @@ As funcionalidades serão divididas em \textit{user stories} e catalogadas no \t
 %-> Definição e explicação dos design patterns escolhidos para serem implementados no projeto
 
 \chapter{Plano de Testes}
-%-> Discussão dos testes de verificação e validação realizados no projeto, assim como descrição de casos de testes, inspeção de código, testes unitários
+Baseado no desenvolvimento ágil e na ideia de manter o código coeso e funcional, dividimos o teste em 3 partes:
+
+\paragraph{Unitário} O teste unitário é efetuado continuamente pelos desenvolvedores, ou seja, após a compilação do cógido. Todos os códigos são devidamente testados utilizando TDD e só são dados \textit{push} após passarem nos testes que foram previamente testados. Os desenvolvedores trabalham em seus \textit{branches} separadamente os quais são juntados ao ``master'' somente pela equipe de integração.
+
+\paragraph{Integração} O teste de integração é efetuado por uma equipe de desenvolvedores, onde todos os \textit{branches} são unidos no final de cada dia de desenvolvimento, e verifica-se se existe algum erro de integração. Caso algum erro seja encontrado, o mesmo deve ser arrumado assim que o possível pela equipe de integração. Caso não seja possível arrumar, o pedaço de software é devolvido ao seu desenvolvedor, o qual será responsável por arrumar este erros.
+
+\paragraph{Aceitação} Efetua-se o teste de aceitação no final de cada sprint para verificar a aderência ao processo do órgão em questão. Este teste é efetuado por uma equipe mista, ou seja, composta dos Gerentes do Projeto, bem como a CTIC (Comitê de Tecnolodia da Informação da DP-DF). Caso algum erro conceitual seja encontrado, os requisitos do mesmo deverão ser verficados. Caso seja um erro de programação, estes deverão ser reportados à equipe de desenvolvimento.
 
 \chapter{Plano de Implantação e Manutenção}
 \paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como "MASTER", ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como "SLAVE", e as armazena para o próximo backup.
