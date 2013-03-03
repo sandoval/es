@@ -5,9 +5,25 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx, subfigure}
+\usepackage{epstopdf}
 \usepackage{indentfirst}
+\usepackage{fancyhdr}
 
-\graphicspath{ {images/} }
+\graphicspath{ {../images/} }
+
+\epstopdfsetup{outdir=./}
+\epstopdfsetup{suffix=}
+
+\pagestyle{fancy}
+
+\fancyhead[RO,RE]{\includegraphics{unb.eps}}
+\fancyhead[LO,LE]{Departamento de Ciência da Computação\\
+116441 --- Engenharia de Software}
+
+\fancypagestyle{plain}{
+\fancyhead[RO,RE]{\includegraphics{unb.eps}}
+\fancyhead[LO,LE]{Departamento de Ciência da Computação\\
+116441 --- Engenharia de Software}}
 
 \title{Especificação de Requisitos do Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF}
 \author{Pedro Salum\\
