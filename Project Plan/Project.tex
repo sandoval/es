@@ -72,24 +72,29 @@ O sistema a ser desenvolvido deve ser completamente Web, para que seja acessíve
 
 \paragraph{MVC} Consolidada arquitetura para aplicações que variam de aplicativos móveis a sistemas web, ela provê separação entre o código responsável pela lógica de negócio e o código responsável pela apresentação e interface com o usuário.
 
-\paragraph{\textit{Peer-to-peer}} 
+\paragraph{\textit{Peer-to-peer}} Para permitir alta disponibilidade, a arquitetura \textit{peer-to-peer} será utilizada, distribuindo processamento e dados pelos Núcleos de Atendimento e Sede.
 
-%-> Definição e explicação da arquitetura de software escolhida para o projeto, focalizando a escolha de padrões de arquitetura, assim como diagrama de arquitetura
-%-> Definição e explicação dos design patterns escolhidos para serem implementados no projeto
+\subsection*{Padrões de Projeto}
+
+\paragraph{\textit{Singleton}} Será utilizado para prestadores de serviço, como serviço de autenticação, por exemplo. Através da utilização desse padrão de projeto, podemos centralizar operações lógicas aumentando a confiabilidade no cumprimento das regras de negócio.
+
+\paragraph{\textit{Observer}} Para operações encadeadas ou acessórias será utilizado o esse padrão, possivelmente inclusive através de um \textit{framework} de \textbf{AOP --- \textit{Aspect-oriented Programming}}, permitindo código mais limpo e suscinto, focado na lógica de negócio.
+
+\paragraph{\textit{State}} Padrão de projeto bastante útil para autenticação, diferenciando um usuário entre os estados de ``autenticado'', ``anônimo'' ou inclusive delineando os papéis assumidos por aquele usuário.
 
 \chapter{Plano de Testes}
 Baseado no desenvolvimento ágil e na ideia de manter o código coeso e funcional, dividimos o teste em 3 partes:
 
-\paragraph{Unitário} O teste unitário é efetuado continuamente pelos desenvolvedores, ou seja, após a compilação do cógido. Todos os códigos são devidamente testados utilizando TDD e só são dados \textit{push} após passarem nos testes que foram previamente testados. Os desenvolvedores trabalham em seus \textit{branches} separadamente os quais são juntados ao ``master'' somente pela equipe de integração.
+\paragraph{Unitário} O teste unitário é efetuado continuamente pelos desenvolvedores, ou seja, após a compilação do códido. Todos os códigos são devidamente testados utilizando TDD e só são dados \textit{push} após passarem nos testes que foram previamente testados. Os desenvolvedores trabalham em seus \textit{branches} separadamente os quais são juntados ao ``master'' somente pela equipe de integração.
 
 \paragraph{Integração} O teste de integração é efetuado por uma equipe de desenvolvedores, onde todos os \textit{branches} são unidos no final de cada dia de desenvolvimento, e verifica-se se existe algum erro de integração. Caso algum erro seja encontrado, o mesmo deve ser arrumado assim que o possível pela equipe de integração. Caso não seja possível arrumar, o pedaço de software é devolvido ao seu desenvolvedor, o qual será responsável por arrumar este erros.
 
-\paragraph{Aceitação} Efetua-se o teste de aceitação no final de cada sprint para verificar a aderência ao processo do órgão em questão. Este teste é efetuado por uma equipe mista, ou seja, composta dos Gerentes do Projeto, bem como a CTIC (Comitê de Tecnolodia da Informação da DPDF). Caso algum erro conceitual seja encontrado, os requisitos do mesmo deverão ser verficados. Caso seja um erro de programação, estes deverão ser reportados à equipe de desenvolvimento.
+\paragraph{Aceitação} Efetua-se o teste de aceitação no final de cada \textit{sprint} para verificar a aderência ao processo do órgão em questão. Este teste é efetuado por uma equipe mista, ou seja, composta dos Gerentes do Projeto, bem como a CTIC (Comitê de Tecnologia da Informação da DPDF). Caso algum erro conceitual seja encontrado, os requisitos do mesmo deverão ser verificados. Caso seja um erro de programação, estes deverão ser reportados à equipe de desenvolvimento.
 
 \chapter{Plano de Implantação e Manutenção}
-\paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como ``MASTER'', ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como ``SLAVE'', e as armazena para o próximo backup.
+\paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um \textit{deploy} em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como ``MASTER'', ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como ``SLAVE'', e as armazena para o próximo \textit{backup}.
 
-\paragraph{Manutenção} Manutensões serão efetuadas em ambiente de teste, as quais após estarem estáveis e prontas para deploy, seráo mandadas para o servidor central, substituindo a cópia ``MASTER'', onde os ``SLAVES'' irão solicitar a versão mais nova do sistema o mais cedo possível, ou seja, uma cópia do ``MASTER'' será baixada para o "SLAVE" a qual substituirá a versão anterior. Importante ressaltar que só serão transmitidos as partes atualizadas do sistema, reduzindo a carga da rede.
+\paragraph{Manutenção} Manutenções serão efetuadas em ambiente de teste, as quais após estarem estáveis e prontas para \textit{deploy}, serão mandadas para o servidor central, substituindo a cópia ``MASTER'', onde os ``SLAVES'' irão solicitar a versão mais nova do sistema o mais cedo possível, ou seja, uma cópia do ``MASTER'' será baixada para o "SLAVE" a qual substituirá a versão anterior. Importante ressaltar que só serão transmitidos as partes atualizadas do sistema, reduzindo a carga da rede.
 
 \chapter{Análise de Riscos}
 
@@ -135,7 +140,6 @@ Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema d
 
 Devido a baixa probabilidade de ocorrência dos riscos de importância Muito Baixa, e são impossíveis de serem mitigados, estes serão descartados para fins deste projeto. 
 
-%-> Discussão dos riscos do projeto e estratégia de mitigação
 \bibliographystyle{plain}
 \bibliography{es}
 
