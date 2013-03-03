@@ -58,7 +58,11 @@ A metodologia de desenvolvimento escolhida foi baseada em métodos ágeis. Levan
 
 Sabendo que métodos ágeis não são próprios para implantação uniforme em qualquer situação \cite{cohn2009succeeding}, as ferramentas e metodologias escolhidas para este projeto são uma sugestão e podem sofrer modificações ou adaptações ao longo do desenvolvimento.
 
-\paragraph{Scrum} 
+\paragraph{Scrum} Metodologia de gerência de projetos, tem sido muito utilizada para desenvolvimento de software de maneira ágil \cite{854065}. As iterações utilizadas (\textit{sprints}) terão duração de duas semanas, sendo que uma versão funcional do software tem que ser entregue ao final de cada \textit{sprint}.
+
+As funcionalidades serão divididas em \textit{user stories} e catalogadas no \textit{product backlog}. Ao início de cada \textit{sprint}, algumas serão selecionadas e movidas para o \textit{sprint backlog}, tendo de ser implementadas até o final da \textit{sprint}.
+
+\paragraph{TDD --- \textit{Test-driven Development}} Metodologia que aumenta qualidade de código através da implementação de testes antes da implementação da funcionalidade que será testada. O uso de TDD no desenvolvimento reduz significativamente o número de defeitos com pouco \textit{overhead} \cite{1201238}.
 %-> Definição e explicação de qual processo de desenvolvimento de software escolhido para o projeto
 
 \chapter{Arquitetura e padrões de projeto}
@@ -74,28 +78,28 @@ Sabendo que métodos ágeis não são próprios para implantação uniforme em q
 
 \chapter{Análise de Riscos}
 
-A pesar de ser um software consideravelmente pequeno, quando falamos se sistemas coorporativos, ainda existem riscos que devem ser levados em consideração, mesmo que estes sejam completamente improváveis de acontecerem no curto-médio prazo. A seguir estão listados, em nível de probabilidade, e detalhados os riscos aqui levados em consideração.
+A pesar de ser um software consideravelmente pequeno, quando falamos se sistemas corporativos, ainda existem riscos que devem ser levados em consideração, mesmo que estes sejam completamente improváveis de acontecerem no curto-médio prazo. A seguir estão listados, em nível de probabilidade, e detalhados os riscos aqui levados em consideração.
 
-\paragraph{Alta} Eventos de álta probabilidade são aqueles referentes à equipe de desenvolvimento e suas relações com as partes, tanto UnB quanto DP-DF. Dentre estes riscos estão:
+\paragraph{Alta} Eventos de alta probabilidade são aqueles referentes à equipe de desenvolvimento e suas relações com as partes, tanto UnB quanto DP-DF. Dentre estes riscos estão:
 
 \begin{itemize}
 \item [-] Saída de membro da gerência do projeto
 \item [-] Saída de membro altamente qualificado, tanto na área de teste quanto de desenvolvimento
 \item [-] Atraso no recebimento do capital para pagamento da equipe
-\item [-] Falta de cooperação entre a Defensoria Públia do Distrito Federal e a equipe interna.
+\item [-] Falta de cooperação entre a Defensoria Pública do Distrito Federal e a equipe interna.
 \end{itemize}
 
-Para evitarmos problemas internos da equipe, iremos bem remunerá-los, manter reservas financeiras proveninentes do não pagamento dos coordenadores no início do projeto, remunerando-os no final, gerando um caixa de segurança. Além da perte financeira, iremos prover toda a estrutura necessária para que o trabalho possa ser efetuado além de ambientes para descanso e descontração. Para evitar a falta de cooperação da equipe interna da DP-DF, iremos negociar com a diretoria do órgão para que um membro seja alocado somente para se comunicar com a nossa equipe, retirando os outros afazeres do mesmo.
+Para evitarmos problemas internos da equipe, iremos bem remunerá-los, manter reservas financeiras provenientes do não pagamento dos coordenadores no início do projeto, remunerando-os no final, gerando um caixa de segurança. Além da parte financeira, iremos prover toda a estrutura necessária para que o trabalho possa ser efetuado além de ambientes para descanso e descontração. Para evitar a falta de cooperação da equipe interna da DP-DF, iremos negociar com a diretoria do órgão para que um membro seja alocado somente para se comunicar com a nossa equipe, retirando os outros afazeres do mesmo.
 
-\paragraph{Média} Eventos de média probabilidade são aqueles internos à instituiçãoe que são possíveis de ocorrer e que podem impedir ou dificultar o desenvolvimento do sistema como um todo. Estes são:
+\paragraph{Média} Eventos de média probabilidade são aqueles internos à instituição e que são possíveis de ocorrer e que podem impedir ou dificultar o desenvolvimento do sistema como um todo. Estes são:
 \begin{itemize}
 \item [-] Cancelamento do Contrato entre DP-DF e a Universidade de Brasília
 \item [-] Troca do quadro de diretores
-\item [-] Probelmas de infraestrutura na área de TI, sejam com servidores ou com a parte de telecomunicação
+\item [-] Problemas de infraestrutura na área de TI, sejam com servidores ou com a parte de telecomunicação
 \end{itemize}
 
 Visando a redução destes riscos de média probabilidade, devemos efetuar a prestação de serviço de desenvolvimento de software o mais rápido possível, reduzindo os riscos de existir uma possível troca de gestão e cancelamento de contrato entre as partes.
-Sobre problemas de infraestrutura de TI, o sistema deverá funcionar tanto de forma local (Por meio de uma LAN) quanto em rede (WAN). Sendo assim, devemos partir para uma abordagem distribuida, com possível topologia de Malha ou Estrela extendida.
+Sobre problemas de infraestrutura de TI, o sistema deverá funcionar tanto de forma local (Por meio de uma LAN) quanto em rede (WAN). Sendo assim, devemos partir para uma abordagem distribuída, com possível topologia de Malha ou Estrela estendida.
 
 \paragraph{Baixa} Eventos de baixa probabilidade são aqueles que modificam estruturas que são externas à Defensoria Pública do Distrito Federal, e não cabe à instituição decidi-las. Dentre elas estão:
 \begin{itemize}
@@ -114,10 +118,10 @@ Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema d
 \end{itemize}
 
 
-Devido a baixa probabilidade de ocorrencia dos riscos de importância Muito Baixa, e são impossíveis de serem mitigados, estes serão descartados para fins deste projeto. 
+Devido a baixa probabilidade de ocorrência dos riscos de importância Muito Baixa, e são impossíveis de serem mitigados, estes serão descartados para fins deste projeto. 
 
 %-> Discussão dos riscos do projeto e estratégia de mitigação
-\bibliographystyle{plain}
+\bibliographystyle{abnt-alf}
 \bibliography{es}
 
 \end{document}
