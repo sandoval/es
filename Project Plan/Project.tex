@@ -84,7 +84,7 @@ Baseado no desenvolvimento ágil e na ideia de manter o código coeso e funciona
 
 \paragraph{Integração} O teste de integração é efetuado por uma equipe de desenvolvedores, onde todos os \textit{branches} são unidos no final de cada dia de desenvolvimento, e verifica-se se existe algum erro de integração. Caso algum erro seja encontrado, o mesmo deve ser arrumado assim que o possível pela equipe de integração. Caso não seja possível arrumar, o pedaço de software é devolvido ao seu desenvolvedor, o qual será responsável por arrumar este erros.
 
-\paragraph{Aceitação} Efetua-se o teste de aceitação no final de cada sprint para verificar a aderência ao processo do órgão em questão. Este teste é efetuado por uma equipe mista, ou seja, composta dos Gerentes do Projeto, bem como a CTIC (Comitê de Tecnolodia da Informação da DP-DF). Caso algum erro conceitual seja encontrado, os requisitos do mesmo deverão ser verficados. Caso seja um erro de programação, estes deverão ser reportados à equipe de desenvolvimento.
+\paragraph{Aceitação} Efetua-se o teste de aceitação no final de cada sprint para verificar a aderência ao processo do órgão em questão. Este teste é efetuado por uma equipe mista, ou seja, composta dos Gerentes do Projeto, bem como a CTIC (Comitê de Tecnolodia da Informação da DPDF). Caso algum erro conceitual seja encontrado, os requisitos do mesmo deverão ser verficados. Caso seja um erro de programação, estes deverão ser reportados à equipe de desenvolvimento.
 
 \chapter{Plano de Implantação e Manutenção}
 \paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como ``MASTER'', ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como ``SLAVE'', e as armazena para o próximo backup.
@@ -95,7 +95,7 @@ Baseado no desenvolvimento ágil e na ideia de manter o código coeso e funciona
 
 A pesar de ser um software consideravelmente pequeno, quando falamos se sistemas corporativos, ainda existem riscos que devem ser levados em consideração, mesmo que estes sejam completamente improváveis de acontecerem no curto-médio prazo. A seguir estão listados, em nível de probabilidade, e detalhados os riscos aqui levados em consideração.
 
-\paragraph{Alta} Eventos de alta probabilidade são aqueles referentes à equipe de desenvolvimento e suas relações com as partes, tanto UnB quanto DP-DF. Dentre estes riscos estão:
+\paragraph{Alta} Eventos de alta probabilidade são aqueles referentes à equipe de desenvolvimento e suas relações com as partes, tanto UnB quanto DPDF. Dentre estes riscos estão:
 
 \begin{itemize}
 \item [-] Saída de membro da gerência do projeto
@@ -104,11 +104,11 @@ A pesar de ser um software consideravelmente pequeno, quando falamos se sistemas
 \item [-] Falta de cooperação entre a Defensoria Pública do Distrito Federal e a equipe interna.
 \end{itemize}
 
-Para evitarmos problemas internos da equipe, iremos bem remunerá-los, manter reservas financeiras provenientes do não pagamento dos coordenadores no início do projeto, remunerando-os no final, gerando um caixa de segurança. Além da parte financeira, iremos prover toda a estrutura necessária para que o trabalho possa ser efetuado além de ambientes para descanso e descontração. Para evitar a falta de cooperação da equipe interna da DP-DF, iremos negociar com a diretoria do órgão para que um membro seja alocado somente para se comunicar com a nossa equipe, retirando os outros afazeres do mesmo.
+Para evitarmos problemas internos da equipe, iremos bem remunerá-los, manter reservas financeiras provenientes do não pagamento dos coordenadores no início do projeto, remunerando-os no final, gerando um caixa de segurança. Além da parte financeira, iremos prover toda a estrutura necessária para que o trabalho possa ser efetuado além de ambientes para descanso e descontração. Para evitar a falta de cooperação da equipe interna da DPDF, iremos negociar com a diretoria do órgão para que um membro seja alocado somente para se comunicar com a nossa equipe, retirando os outros afazeres do mesmo.
 
 \paragraph{Média} Eventos de média probabilidade são aqueles internos à instituição e que são possíveis de ocorrer e que podem impedir ou dificultar o desenvolvimento do sistema como um todo. Estes são:
 \begin{itemize}
-\item [-] Cancelamento do Contrato entre DP-DF e a Universidade de Brasília
+\item [-] Cancelamento do Contrato entre DPDF e a Universidade de Brasília
 \item [-] Troca do quadro de diretores
 \item [-] Problemas de infraestrutura na área de TI, sejam com servidores ou com a parte de telecomunicação
 \end{itemize}
@@ -119,7 +119,7 @@ Sobre problemas de infraestrutura de TI, o sistema deverá funcionar tanto de fo
 \paragraph{Baixa} Eventos de baixa probabilidade são aqueles que modificam estruturas que são externas à Defensoria Pública do Distrito Federal, e não cabe à instituição decidi-las. Dentre elas estão:
 \begin{itemize}
 \item [-] Modificação na estrutura judiciária do Distrito Federal
-\item [-] Modificação de como ocorre a comunicação entre as partes (DP-DF - Tribunal)
+\item [-] Modificação de como ocorre a comunicação entre as partes (DPDF - Tribunal)
 \end{itemize}
 
 Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema deve ser flexível o suficiente para se adaptar à tais mudanças, seja por meio de poucas modificações ou, idealmente, nenhuma modificação.
@@ -127,9 +127,9 @@ Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema d
 \paragraph{Muito Baixa} Eventos de probabilidade baixa podem ser considerados catastróficos, ou seja, não só inviabilizam o desenvolvimento do software como impossibilitam o seu uso e existência da própria instituição. Entre eles estão:
 \begin{itemize}
 \item [-] Terremoto com epicentro próximo à Brasília devasta toda a estrutura jurídica de Brasília e todo o recurso é devidamente realocado
-\item [-] Meteoro atinge o prédio da DP-DF
-\item [-] Godzilla surge do fundo do Lago Paranoá e derruba o prédio da DP-DF
-\item [-] ETs invadem a terra e sugam o prédio da DP-DF
+\item [-] Meteoro atinge o prédio da DPDF
+\item [-] Godzilla surge do fundo do Lago Paranoá e derruba o prédio da DPDF
+\item [-] ETs invadem a terra e sugam o prédio da DPDF
 \end{itemize}
 
 
