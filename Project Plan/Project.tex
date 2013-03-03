@@ -74,7 +74,9 @@ As funcionalidades serão divididas em \textit{user stories} e catalogadas no \t
 %-> Discussão dos testes de verificação e validação realizados no projeto, assim como descrição de casos de testes, inspeção de código, testes unitários
 
 \chapter{Plano de Implantação e Manutenção}
-%-> Discussão da estratégia de implantação e manutenção do projeto
+\paragraph{Implantação} A implantação do sistema aqui descrito será por meio de um deploy em um servidor central da Defensoria Pública do Distrito Federal e uma cópia do mesmo em cada um dos 26 Núcleos de Assistência Jurídica espalhados pelo Distrito Federal. A cópia dentro do servidor central será configurada como "MASTER", ou seja, recebe informações das outras 26 cópias espalhadas, configuradas como "SLAVE", e as armazena para o próximo backup.
+
+\paragraph{Manutenção} Manutensões serão efetuadas em ambiente de teste, as quais após estarem estáveis e prontas para deploy, seráo mandadas para o servidor central, substituindo a cópia "MASTER", onde os "SLAVES" irão solicitar a versão mais nova do sistema o mais cedo possível, ou seja, uma cópia do "MASTER" será baixada para o "SLAVE" a qual substituirá a versão anterior. Importante ressaltar que só serão transmitidos as partes atualizadas do sistema, reduzindo a carga da rede.
 
 \chapter{Análise de Riscos}
 
