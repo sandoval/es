@@ -76,11 +76,34 @@ Sabendo que métodos ágeis não são próprios para implantação uniforme em q
 
 A pesar de ser um software consideravelmente pequeno, quando falamos se sistemas coorporativos, ainda existem riscos que devem ser levados em consideração, mesmo que estes sejam completamente improváveis de acontecerem no curto-médio prazo. A seguir estão listados, em nível de probabilidade, e detalhados os riscos aqui levados em consideração.
 
-\paragraph{Alta}
+\paragraph{Alta} Eventos de álta probabilidade são aqueles referentes à equipe de desenvolvimento e suas relações com as partes, tanto UnB quanto DP-DF. Dentre estes riscos estão:
 
-\paragraph{Média}
+\begin{itemize}
+\item [-] Saída de membro da gerência do projeto
+\item [-] Saída de membro altamente qualificado, tanto na área de teste quanto de desenvolvimento
+\item [-] Atraso no recebimento do capital para pagamento da equipe
+\item [-] Falta de cooperação entre a Defensoria Públia do Distrito Federal e a equipe interna.
+\end{itemize}
 
-\paragraph{Baixa} Eventos de baixa probabilidade são aqueles que modificam estruturas que são externas à Defensoria Pública do Distrito Federal
+Para evitarmos problemas internos da equipe, iremos bem remunerá-los, manter reservas financeiras proveninentes do não pagamento dos coordenadores no início do projeto, remunerando-os no final, gerando um caixa de segurança. Além da perte financeira, iremos prover toda a estrutura necessária para que o trabalho possa ser efetuado além de ambientes para descanso e descontração. Para evitar a falta de cooperação da equipe interna da DP-DF, iremos negociar com a diretoria do órgão para que um membro seja alocado somente para se comunicar com a nossa equipe, retirando os outros afazeres do mesmo.
+
+\paragraph{Média} Eventos de média probabilidade são aqueles internos à instituiçãoe que são possíveis de ocorrer e que podem impedir ou dificultar o desenvolvimento do sistema como um todo. Estes são:
+\begin{itemize}
+\item [-] Cancelamento do Contrato entre DP-DF e a Universidade de Brasília
+\item [-] Troca do quadro de diretores
+\item [-] Probelmas de infraestrutura na área de TI, sejam com servidores ou com a parte de telecomunicação
+\end{itemize}
+
+Visando a redução destes riscos de média probabilidade, devemos efetuar a prestação de serviço de desenvolvimento de software o mais rápido possível, reduzindo os riscos de existir uma possível troca de gestão e cancelamento de contrato entre as partes.
+Sobre problemas de infraestrutura de TI, o sistema deverá funcionar tanto de forma local (Por meio de uma LAN) quanto em rede (WAN). Sendo assim, devemos partir para uma abordagem distribuida, com possível topologia de Malha ou Estrela extendida.
+
+\paragraph{Baixa} Eventos de baixa probabilidade são aqueles que modificam estruturas que são externas à Defensoria Pública do Distrito Federal, e não cabe à instituição decidi-las. Dentre elas estão:
+\begin{itemize}
+\item [-] Modificação na estrutura judiciária do Distrito Federal
+\item [-] Modificação de como ocorre a comunicação entre as partes (DP-DF - Tribunal)
+\end{itemize}
+
+Com o objetivo de reduzir possíveis danos gerados por estes riscos, o sistema deve ser flexível o suficiente para se adaptar à tais mudanças, seja por meio de poucas modificações ou, idealmente, nenhuma modificação.
 
 \paragraph{Muito Baixa} Eventos de probabilidade baixa podem ser considerados catastróficos, ou seja, não só inviabilizam o desenvolvimento do software como impossibilitam o seu uso e existência da própria instituição. Entre eles estão:
 \begin{itemize}
