@@ -25,7 +25,7 @@
 \fancyhead[LO,LE]{Departamento de Ciência da Computação\\
 116441 --- Engenharia de Software}}
 
-\title{Documento de Visão do Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF}
+\title{Plano de Projeto do Sistema de Gestão Eletrônica de Documentos da Defensoria Pública do Distrito Federal - SGED/DPDF}
 \author{Pedro Salum\\
 	09/0139232\\
 	pedro@loopec.com.br
@@ -40,162 +40,22 @@
 
 \chapter{Introdução}
 
-\section{Finalidade}
+\chapter{Processo de Desenvolvimento}
 
-A finalidade deste documento é coletar, analisar e definir necessidades e recursos de nível superior do Sistema de Gerenciamento Eletrônico de Documentos - SGED, com a finalidade de definir seu objetivo, suas principais funcionalidades e sua viabilidade.
+%-> Definição e explicação de qual processo de desenvolvimento de software escolhido para o projeto
 
-\section{Escopo}
+\chapter{Arquitetura e padrões de projeto}
 
-O escopo deste documento se limita ao projeto SGED, levando em consideração seus usuários, sua equipe de desenvolvimento e ecossistema de atuação.
+%-> Definição e explicação da arquitetura de software escolhida para o projeto, focalizando a escolha de padrões de arquitetura, assim como diagrama de arquitetura
+%-> Definição e explicação dos design patterns escolhidos para serem implementados no projeto
 
-\section{Definições, Acrônimos e Abreviações}
-\begin{description}
-\item[SGED] Sistema de Gerênciamento Eletrônico de Documentos;
-\item[DPDF] Defensoria Públcia do Distrito Federal.
-\end{description}
+\chapter{Plano de Testes}
+%-> Discussão dos testes de verificação e validação realizados no projeto, assim como descrição de casos de testes, inspeção de código, testes unitários
 
-\section{Visão Geral}
+\chapter{Plano de Implantação e Manutenção}
+%-> Discussão da estratégia de implantação e manutenção do projeto
 
-\chapter{Posicionamento}
-
-\section{Oportunidade de Negócios}
-
-Com a quantidade cada vez maior de documentos burocráticos gerados e a inevitável informatização de processos organizacionais, surge a necessidade de uma solução de software para armazenamento e catalogação desses documentos de maneira que permita a fácil localização, compartilhamento e acesso a tais documentos.
-
-Tal necessidade é mais agravada em grandes organizações como a Defensoria Pública do Distrito Federal (DPDF), mas não deixa de ser um problema em pequenas empresas. Este documento descreve solução capaz de armazenar e catalogar documentos, sendo eles completamente digitais, digitalizados ou físicos.
-
-\section{Descrição do Problema}
-
-\subsection*{Problema I}
-\paragraph{O problema} de armazenamento, catalogação e controle de custódia de documentos burocráticos.
-\paragraph{Afeta} a Defensoria Pública do Distrito Federal.
-\paragraph{Cujo o impacto é} perda de documentos; dificuldade de transporte de documentos físicos; dificuldade de recuperar documentos; oneração em geral de processos organizacionais;
-\paragraph{Uma boa solução permitiria} localização rápida de documento; compartilhamento de documentos digitais; registro de movimentação de documentos; busca imediata de documentos digitais ou digitalizados; armazenamento organizado e centralizado de documentos físicos;
-
-\subsection*{Problema II}
-\paragraph{O problema} Dificuldade de transmissão da informação quando a construção de um documento é realizada por várias pessoas.
-\paragraph{Afeta} a Defensoria Pública do Distrito Federal.
-\paragraph{Cujo o impacto é} demora na construção de peças jurídicas; erros em peças decorridos de falhas na comunicação; perda de documentos na passagem de uma pessoa para outra.
-\paragraph{Uma boa solução permitiria} a criação de um documento digital que poderia ser encaminhado a uma ou mais pessoas (uma de cada vez) para realização de modificações com comentários, até que chegue em sua versão final.
-
-\section{Solução}
-
-Para organizações de todos os tamanhos que possuem documentos digitais ou físicos que precisam ser organizados e compartilhados, o SGED oferece solução completa de fácil utilização para controle de custódia, organização, compartilhamento e armazenamento de documentos.
-
-\chapter{Usuários e \textit{Stakeholders}}
-
-\section{Perfis de usuário}
-
-Esta seção descreve o que cada perfil de usuário identificado espera da solução descrita nesse documento.
-
-\subsection{Diretor}
-
-Espera poder visualizar estatísticas sobre a movimentação de documentos relativa a cada Núcleo de Atendimento e a cada Defensor, Servidor ou Estagiário específico. Espera também poder localizar qualquer documento a qualquer momento dentro da Instituição.
-
-\subsection{Defensor ou Colaborador}
-
-Espera poder de forma fácil e intuitiva registrar movimentação de processos, redigir peças jurídicas colaborativamente e visualizar estatísticas sobre seu Núcleo de Atendimento e seus integrantes. Espera também poder localizar qualquer documento a qualquer momento dentro da Instituição. 
-
-\subsection{Servidor}
-
-Espera poder de forma fácil registrar entrada de processos no Núcleo de Atendimento e localizar qualquer documento a qualquer momento dentro da Instituição.
-
-\subsection{Estagiário}
-
-Espera poder redigir peças jurídicas colaborativamente de forma fácil e intuitiva, além de poder registrar a movimentação de processos.
-
-\section{Ambiente dos Usuários}
-
-Os usuários da solução proposta estão entre todos os envolvidos no atendimento jurídico da DPDF, bem como os membros da adminstração e Direção geral dessa instituição. A infraestrutura está bem estabelecida, com estações de trabalho utilizando o ambiente Microsoft e rede interligando todos os pontos de atendimento.
-
-Não há sistema de informações em uso porem há necessidade de integração. O editor de texto utilizado é o Microsoft Word e o sistema proposto deve utilizar documentos no formato DOCX para a edição colaborativa.
-
-\section{\textit{Stakeholders}}
-
-\subsection{Defensoria Pública do Distrito Federal}
-
-\begin{center}
-\begin{tabular}{ | l | p{10cm} | }
-\hline
-Representantes         & Lano de Castro, Leandro Hungria e Dr. Jairo de Almeida. \\
-\hline
-Descrição              & Principal \textit{stakeholder}, com entendimento do negócio e entendimento técnico.\\
-\hline
-Responsabilidades      & Validar produtos entregues; Fornecer as informações de negócio e sobre infraestrutura necessárias para o desenvolvimento; Fornecer infraestrutura para implantação.\\
-\hline
-Critério de Sucesso    & Ter o sistema que atenda às necessidades da DPDF implantado e funcionando.\\
-\hline
-\end{tabular}
-\end{center}
-
-\subsection{Universidade de Brasília}
-
-\begin{center}
-\begin{tabular}{ | l | p{10cm} | }
-\hline
-Representantes         & Daniel Sandoval e Pedro Salum. \\
-\hline
-Descrição              & Executor, responsável pela codificação e implantação da solução.\\
-\hline
-Responsabilidades      & Desenhar, produzir, testar e entregar produtos de software; Implantar tais produtos após validação.\\
-\hline
-Critério de Sucesso    & Ter o sistema validado, implantado e funcionando dentro do prazo estabelecido; Número de \textit{bug reports} inferior a 5\% do número de linhas de código entregues.\\
-\hline
-\end{tabular}
-\end{center}
-
-\chapter{Visão geral do Produto}
-
-Este capítulo provê uma visão de alto nível da solução proposta no tocante às suas funções, interfaces com outras aplicações e configurações de sistema.
-
-\section{Perspectiva do Produto}
-
-O sistema deve ser auto-suficiente e auto-contido, de maneira a funcionar independentemente de outras soluções. Ele deve ser construído de maneira a poder evoluir, incorporando outros módulos que serão responsáveis por atender a outras necessidades da Defensoria Pública porém de maneira integrada como, por exemplo, cadastro de Assistidos (pessoas que utilizam os serviços da DPDF).
-
-\section{Resumo de Funções}
-
-\paragraph{Controle de Acesso} O sistema só poderá ser acessado por pessoas autorizadas. Ele deve possuir controle de acesso sofisticado baseado em funções que cada usuário pode realizar. Um conjunto dessas funções autorizadas deve ser entendido como um perfil, que pode ser aplicado a cada usuário e customizado separadamente.
-
-\paragraph{Controle de Processos Judiciais} O sistema deve permitir registro de entrada, movimentação e saída de processos judiciais, rastreando seus encaminhamentos dentro da Instituição através do número do processo. Todo processo que se encontra dentro da DPDF deve estar sob a custódia de uma pessoa física. Essa pessoa pode encaminhá-lo a outra ou ao tribunal.
-
-\paragraph{Edição colaborativa de documentos} O sistema deve permitir criação de documentos do tipo Microsoft Word (DOCX) e encaminhamento do documento para que outras pessoas possam fazer alterações. Cada encaminhamento deve conter o documento e um comentário.
-
-\paragraph{Digitalização e armazenamento de documentos} O sistema deve permitir digitalização e armazenamento de documentos como cédulas de identidade, comprovantes de residência e declarações associados ao cadastro de um usuário.
-
-\section{Hipóteses e Dependências}
-
-\paragraph{Modificação dos padrões dos processos jurídicos} Caso exista uma modificação do funcionamento do poder judiciário do Brasil ou do Distrito Federal, seja a comunicação entre Defensoria - Tribunais ou Tribunais - Defensoria, ou modo de como os processos são registrados (código alfanumérico, código de barras, QR-Code), o sistema teria que ser modificado para poder contemplar estes fatos acima mencionados.
-
-\paragraph{Implementação do Processo Digital} O TJDFT está em fase de migração dos processos fisicos (em papel) para o formato digital, ou seja, toda e qualquer comunicação feita entre o Tribunal e advogados será por meio de uma comunicação digital. No futuro, o sistema terá que ser capaz de se comunicar com o Tribunal por meio de WebServices fornecidos, ou seja, terá que ser feita uma completa adequação do software ao processo digital. Este fato, aqui descrito, atuará mais como um componente do Sistema atual, evitando modificações profundas.
-
-\paragraph{Modificação da Estrutura da DP-DF} Um dos casos mais remotos, que realmente impactaria no Sistema, seria uma completa reestruturação de como funciona a Defensoria Pública do Distrito Federal, ou seja, os papeis desenvolvidos por cada usuário dentro do sistema e como eles se comunicam.
-
-\section{Licenças e Instalação}
-
-O sistema como um todo é desenvolvido sob plataformas OpenSource e são executados em servidores centrais com tecnologia Linux/GNU, ou seja, o sistema é completamente Web e independente de sistema operacional do lado do cliente.
-
-\chapter{Aspectos de Qualidade}
-
-\begin{itemize}
-\item [-] O sistema deve permanecer online todos os dias úteis do ano, devendo paralizar, se necessário, para manutenções aos finais de semana e feriados.
-\item [-] O sistema deve ser capaz de se auto corrigir, mesmo que seja por meio de reboots, de possíveis falhas.
-\item [-] O sistema deve ser capaz de ser operado por usuários leigos e com baixo treinamento.
-\end{itemize}
-
-\chapter{Prioridades}
-
-O sistema deverá ser desenvolvido com base nas prioridades estabelecidas pela Comissão de Tecnologia da Informação (CTIC) da DP-DF. Sendo ela lsitada a seguir:
-\begin{itemize}
-\item [-] Controle de acesso
-\item [-] Controle de Processos Judiciais
-\item [-] Digitalização e armazenamento de documento
-\item [-] Edição colaborativa de documentos
-\end{itemize}
-
-\chapter{Documentação}
-
-\paragraph{Documentação do Sistema} Os códigos do sistema devem ser documentado visandao uma melhor facilidade de manutenção. A documentação de sistema deverá ser gerada por meio de ferramentas como DOXIGEN a partir da documentação interna em padrão JAVADOC.
-
-\paragraph{Manual de usuário} Deve ser confeccionado um manual do usuário que deve existir tanto em versão impressa, quanto versão digital dentro do sistema.
+\chapter{Análise de Riscos}
+%-> Discussão dos riscos do projeto e estratégia de mitigação
 
 \end{document}
